@@ -1,27 +1,26 @@
-
 const int maxN = 1;
 
-int parent[maxN];
-int rank[maxN];
+int PARENT[maxN];
+int RANK[maxN];
 
 int findParent(int node) {
-	if (node == parent[node]) return node;
-	return parent[node] = findParent(parent[node]);
+	if (node == PARENT[node]) return node;
+	return PARENT[node] = findParent(PARENT[node]);
 }
 
 void Union(int uu , int vv) {
 	uu = findParent(uu);
 	vv = findParent(vv);
 
-	if (rank[uu] == rank[vv]) {
-		parent[vv] = uu;
-		rank[uu]++;
+	if (RANK[uu] == RANK[vv]) {
+		PARENT[vv] = uu;
+		RANK[uu]++;
 	} else {
-		parent[max(uu, vv)] = min(uu, vv);
+		PARENT[max(uu, vv)] = min(uu, vv);
 	}
 }
 
 void makeSet() {
-	for (int i = 0 ; i < maxN ; i++) parent[i] = i;
-	for (int i = 0 ; i < maxN ; i++) rank[i] = 0;
+	for (int i = 0 ; i < maxN ; i++) PARENT[i] = i;
+	for (int i = 0 ; i < maxN ; i++) RANK[i] = 0;
 }
