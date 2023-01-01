@@ -1,7 +1,4 @@
 // Author : Dhruv Rajput
-#include<bits/stdc++.h>
-using namespace std;
-
 // erase wont work with less_equal..take erase func from stackoverflow
 // #include <ext/pb_ds/assoc_container.hpp>
 // #include <ext/pb_ds/tree_policy.hpp>
@@ -29,18 +26,18 @@ const ll MOD = 1e9 + 7;
 #define sz(x)   ((int)(x).size())
 #define precise cout<<fixed<<setprecision(10);
 
-void _print(ll t) {cerr << t;}
-void _print(int t) {cerr << t;}
-void _print(string t) {cerr << t;}
-void _print(char t) {cerr << t;}
-void _print(lld t) {cerr << t;}
-void _print(ull t) {cerr << t;}
+void _print(ll t) {cout << t;}
+void _print(int t) {cout << t;}
+void _print(string t) {cout << t;}
+void _print(char t) {cout << t;}
+void _print(lld t) {cout << t;}
+void _print(ull t) {cout << t;}
 
 #ifndef ONLINE_JUDGE
-#define d(x)      cerr<<#x<<" : ";_print(x);cerr<<"\n";
-#define d2(x,y)   cerr<<#x<<" : ";_print(x);cerr<<" , ";cerr<<#y<<" : ";_print(y);cerr<<"\n";
-#define d3(x,y,z) cerr<<#x<<" : ";_print(x);cerr<<" , ";cerr<<#y<<" : ";_print(y);cerr<<" , ";cerr<<#z<<" : ";_print(z);cerr<<"\n";
-#define linerr cerr<<"\n";
+#define d(x)      cout<<#x<<" : ";_print(x);cout<<"\n";
+#define d2(x,y)   cout<<#x<<" : ";_print(x);cout<<" , ";cout<<#y<<" : ";_print(y);cout<<"\n";
+#define d3(x,y,z) cout<<#x<<" : ";_print(x);cout<<" , ";cout<<#y<<" : ";_print(y);cout<<" , ";cout<<#z<<" : ";_print(z);cout<<"\n";
+#define linerr cout<<"\n";
 #else
 #define d(x);
 #define d2(x,y);
@@ -55,13 +52,13 @@ template <class T, class V> void _print(map <T, V> v);
 template <class T> void _print(multiset <T> v);
 template <class T, class V> void _print(multimap <T, V> v);
 
-template <class T, class V> void _print(pair <T, V> p) {cerr << "{ "; _print(p.fi); cerr << " , "; _print(p.se); cerr << " }";}
-template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
-template <class T, class V> void _print(map <T, V> v) {cerr << "\n"; for (auto i : v) {_print(i); cerr << "\n";}}
-template <class T, class V> void _print(multimap <T, V> v) {cerr << "\n"; for (auto i : v) {_print(i); cerr << "\n";}}
-// void _print(pbds v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void _print(pair <T, V> p) {cout << "{ "; _print(p.fi); cout << " , "; _print(p.se); cout << " }";}
+template <class T> void _print(vector <T> v) {cout << "[ "; for (T i : v) {_print(i); cout << " ";} cout << "]";}
+template <class T> void _print(set <T> v) {cout << "[ "; for (T i : v) {_print(i); cout << " ";} cout << "]";}
+template <class T> void _print(multiset <T> v) {cout << "[ "; for (T i : v) {_print(i); cout << " ";} cout << "]";}
+template <class T, class V> void _print(map <T, V> v) {cout << "\n"; for (auto i : v) {_print(i); cout << "\n";}}
+template <class T, class V> void _print(multimap <T, V> v) {cout << "\n"; for (auto i : v) {_print(i); cout << "\n";}}
+// void _print(pbds v) {cout << "[ "; for (auto i : v) {_print(i); cout << " ";} cout << "]";}
 
 ll expo(ll a, ll b, ll mod = MOD) {ll res = 1; while (b > 0) {if (b & 1)res = (res * a) % mod; a = (a * a) % mod; b = b >> 1;} return res;}
 void extendgcd(ll a, ll b, ll*v) {if (b == 0) {v[0] = 1; v[1] = 0; v[2] = a; return ;} extendgcd(b, a % b, v); ll x = v[1]; v[1] = v[0] - v[1] * (a / b); v[0] = x; return;} //pass an arry of size1 3
@@ -78,35 +75,3 @@ lld sqrt(lld n) {lld lb = 0 , ub = 1e9; ll cnt = 100; while (lb <= ub) {lld mid 
 ll sqrt(ll n) {ll lb = 0 , ub = 1e9; ll cnt = 100; while (lb <= ub) {ll mid = lb + (ub - lb) / 2; if (mid * mid == n) return mid; if (mid * mid < n) lb = mid; else ub = mid; if (cnt-- < 0) return mid;} return lb;}
 ll pow(ll a, ll b) {ll res = 1ll; while (b > 0) {if (b & 1)res = (res * a); a = (a * a); b = b >> 1;} return res;}
 
-
-
-
-void solve() {
-
-
-
-}
-
-int main() {
-
-	FASTIO();
-
-#ifndef ONLINE_JUDGE
-	freopen("Error.txt", "w", stderr);
-#endif
-
-	int test_cases = 1;
-	cin >> test_cases;
-
-	for (int tc = 1 ; tc <= test_cases ; tc++) {
-#ifndef ONLINE_JUDGE
-		cerr << "tc : " << tc << "\n";
-#endif
-		solve();
-#ifndef ONLINE_JUDGE
-		cerr << "\n";
-#endif
-	}
-
-	return 0;
-}

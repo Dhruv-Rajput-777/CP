@@ -18,7 +18,7 @@ void factorial() {
 
 ll fact(ll n) {
 	ll ans = 1;
-	for (ll i = 0; i <= n ; i++) {
+	for (ll i = 1; i <= n ; i++) {
 		ans *= i;
 	}
 	return ans;
@@ -26,7 +26,7 @@ ll fact(ll n) {
 
 ll fact(ll n) {
 	ll ans = 1;
-	for (ll i = 0; i <= n ; i++) {
+	for (ll i = 1; i <= n ; i++) {
 		ans = mod_mul(ans , i , mod);
 	}
 	return ans;

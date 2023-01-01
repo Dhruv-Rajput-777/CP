@@ -4,11 +4,11 @@ vector<ll> pvec;
 vector<ll> sieve() {
 
 	fill(prime , prime + maxN , 1);
-	int range = sqrt(maxN);
 	prime[0] = prime[1] = false;
-	for (int i = 2 ; i <= range; i++) {
+
+	for (long long i = 2 ; i * i < maxN ; i++) {
 		if (prime[i]) {
-			for (int j = i * i ; j < maxN ; j += i) {
+			for (long long j = i * i ; j < maxN ; j += i) {
 				prime[j] = 0;
 			}
 		}

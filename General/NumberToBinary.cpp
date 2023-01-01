@@ -1,4 +1,5 @@
 string NosToBin(int n) {
+	if (n == 0) return "0";
 	string t = "";
 	while (n) {
 		if (n & 1) t.pb('1');
