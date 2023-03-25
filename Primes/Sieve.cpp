@@ -1,7 +1,7 @@
 const int maxN = 1e5 + 1;
 bool prime[maxN];
 vector<ll> pvec;
-vector<ll> sieve() {
+void sieve() {
 
 	fill(prime , prime + maxN , 1);
 	prime[0] = prime[1] = false;
@@ -14,5 +14,4 @@ vector<ll> sieve() {
 		}
 	}
 	fr(i , 0 , maxN) if (prime[i]) pvec.pb(i);
-	return pvec;
 }
